@@ -106,7 +106,7 @@ const Wallet = () => {
                     : () => connect()
             }
             className="text-white">
-            {walletStates ? 'Disconnect' : " Connect Wallet"}
+            {walletStates ? 'Disconnect' : " Connect "}
         </button>
     )
 }
