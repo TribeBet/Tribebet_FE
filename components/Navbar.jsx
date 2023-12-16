@@ -2,18 +2,9 @@
 import Wallet from "./Wallet";
 import Image from "next/image";
 import Link from "next/link";
-import Router, { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-// import tatrixLogo from '../assets/tatrixLogo.png'
-import { AiOutlineSearch } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
-import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import logo from "../public/logo/logobig.png"
-import { GiHamburgerMenu } from "react-icons/gi";
-
-
-
-
 
 export default function NavBar() {
 	const router = useRouter();
@@ -28,7 +19,7 @@ export default function NavBar() {
               {/* LOGO */}
               <Link href="/">
                 
-			  <Image src={logo} width={130} height={130} className="rounded-full"/>
+			      <Image src={logo} width={130} height={130} className="rounded-full"/>
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
