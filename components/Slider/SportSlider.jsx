@@ -11,7 +11,7 @@ const SportSlider = ({ sports, onSportChange }) => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center space-x-2 mb-4">
+    <div className="flex flex-row overflow-x-auto p-2 mb-4">
       {sports.map((sport) => (
         <button
           key={sport}
@@ -19,7 +19,7 @@ const SportSlider = ({ sports, onSportChange }) => {
             selectedSport === sport
               ? 'bg-purple-500 text-white'
               : 'bg-gray-300 text-gray-700'
-          } px-4 py-2 rounded-full focus:outline-none mb-2`}
+          } px-4 py-2 rounded-full focus:outline-none mr-2`}
           onClick={() => handleSportClick(sport)}
         >
           {sport}

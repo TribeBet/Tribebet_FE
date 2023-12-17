@@ -5,9 +5,9 @@ import { useState } from 'react';
 import SportSlider from './SportSlider';
 
 const sportsData = [
-  { name: 'Cricket', info: 'Cricket information...', image: './public/footballplayer.jpeg' },
-  { name: 'Football', info: 'Football information...', image: './public/footballplayer.jpeg' },
-  { name: 'Basketball', info: 'Basketball information...', image: './public/footballplayer.jpeg' },
+  { name: 'Cricket', info: 'Cricket information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'},
+  { name: 'Football', info: 'Football information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' },
+  { name: 'Basketball', info: 'Basketball information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'},
   // Add more sports as needed
 ];
 
@@ -30,8 +30,7 @@ const Slider = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-4 text-white">Top League</h1>
+    <div className='mr-3'>
       <SportSlider
         sports={['All', ...sportsData.map((sport) => sport.name)]}
         onSportChange={handleSportChange}
