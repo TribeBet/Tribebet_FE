@@ -4,9 +4,9 @@ import { useState, useRef, useEffect } from 'react';
 import MovieCard from './Card';
 
 const moviesData = [
-  { name: 'Cricket', info: 'Cricket information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' },
-  { name: 'Football', info: 'Football information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' },
-  { name: 'Basketball', info: 'Basketball information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' },
+  { name: 'Cricket', info: 'Cricket information...', image: '/images/cricket.png' },
+  { name: 'Football', info: 'Football information...', image: '/images/football.jpeg' },
+  { name: 'Basketball', info: 'Basketball information...', image: '/images/basketball.jpeg' },
   // Add more sports as needed
 ];
 

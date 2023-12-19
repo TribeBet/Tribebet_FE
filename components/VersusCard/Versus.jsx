@@ -3,35 +3,33 @@
 import React, { useState } from 'react';
 import SportSlider from './SportSlider';
 import VersusCard from './VersusCard';
+import gameData from '../../lib/gameData.js'; // Import gameData
 
 const sportsData = [
-  { name: 'Cricket', teams: ['Team A', 'Team B', 'Team C'], date: '19 Nov 2023' },
-  { name: 'Football', teams: ['Team X', 'Team Y', 'Team Z'], date: '20 Nov 2023' },
-  { name: 'Basketball', teams: ['Team D', 'Team E', 'Team F'], date: '21 Nov 2023' },
+  { name: 'Cricket', teams: ['India', 'England', 'Australia'], date: '19 Nov 2023',  },
+  { name: 'Football', teams: ['Manchester City', 'Real Madrid', 'Brazil'], date: '20 Nov 2023',  },
+  { name: 'Basketball', teams: ['Spain', 'USA', 'Argentina'], date: '21 Nov 2023',  },
 ];
 
-const generateRandomProbability = () => {
-  return (Math.random() * (5 - 0.5) + 0.5).toFixed(2);
-};
-
-const generateVersusData = (sportsData) => {
+const generateVersusData = (sportsData, gameData) => {
   const versusData = [];
 
   sportsData.forEach((sport) => {
     const teams = sport.teams;
-    for (let i = 0; i < teams.length - 1; i++) {
-      for (let j = i + 1; j < teams.length; j++) {
-        versusData.push({
-          team1: { name: teams[i], sport: sport.name, image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' },
-          team2: { name: teams[j], sport: sport.name, image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' },
-          prob1: 2.1,
-          prob2: 3.2,
-          prob3: 1.3,
-          date: sport.date,
-          sportName: sport.name,
-        });
-      }
-    }
+    const data = gameData.filter((item) => item.sportName === sport.name);
+
+    data.forEach((item) => {
+      versusData.push({
+        team1: { name: item.team1.name, sport: item.team1.sport, image: item.team1.image },
+        team2: { name: item.team2.name, sport: item.team2.sport, image: item.team2.image },
+        prob1: item.prob1,
+        prob2: item.prob2,
+        prob3: item.prob3,
+        date: item.date,
+        sportName: item.sportName,
+        tournament: item.tournament, // Include tournament information
+      });
+    });
   });
 
   return versusData;
@@ -39,7 +37,7 @@ const generateVersusData = (sportsData) => {
 
 const VersusSlider = () => {
   const [selectedSport, setSelectedSport] = useState(null);
-  const [sortedData, setSortedData] = useState(generateVersusData(sportsData));
+  const [sortedData, setSortedData] = useState(generateVersusData(sportsData, gameData));
 
   const handleSportChange = (sport) => {
     setSelectedSport(sport);
@@ -47,10 +45,10 @@ const VersusSlider = () => {
     // Implement your sorting logic here based on the selected sport
     // If "All" is selected, show all versus data
     if (sport === 'All') {
-      setSortedData(generateVersusData(sportsData));
+      setSortedData(generateVersusData(sportsData, gameData));
     } else {
       // Otherwise, filter data based on the selected sport
-      const filteredData = generateVersusData(sportsData).filter(
+      const filteredData = generateVersusData(sportsData, gameData).filter(
         (item) => item.team1.sport === sport || item.team2.sport === sport
       );
       setSortedData(filteredData);
@@ -84,6 +82,7 @@ const VersusSlider = () => {
           prob3={item.prob3}
           date={item.date}
           sportName={item.sportName}
+          tournament={item.tournament} 
         />
       ))}
     </div>

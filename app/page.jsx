@@ -1,5 +1,4 @@
 import Search from "@/components/Search";
-import Slider from "@/components/Slider/Slider";
 import CardSlider from "@/components/Card/CardSlider";
 import Versus from "@/components/VersusCard/Versus";
 
@@ -10,8 +9,8 @@ export default function Home() {
         <CardSlider />
       </div>
 
-      <div className=" absoulte pt-2">
-        <Search />
+      <div className=" absoulte pt-4">
+
       </div>
       
       <div className="relative pb-2">

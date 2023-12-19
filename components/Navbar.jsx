@@ -52,27 +52,11 @@ export default function NavBar() {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-600  md:hover:text-gray-600 md:hover:bg-transparent">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                    About
-                  </Link>
-                </li>
                 <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-600  md:hover:text-gray-600 md:hover:bg-transparent">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                    Blogs
+                  <Link href="#bets" onClick={() => setNavbar(!navbar)}>
+                    My Bets
                   </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-600  md:hover:text-gray-600 md:hover:bg-transparent">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                    Contact
-                  </Link>
-                </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-600  md:hover:text-gray-600 md:hover:bg-transparent">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                    Projects
-                  </Link>
-                </li>
-				         
+                </li>				         
                 <li className="pb-2 pt-2 mb-4 text-xl items-center rounded-fulln text-white py-2 px-6 text-center  border-b-2 md:border-b-0  bg-purple-600  border-purple-600 rounded-full md:hover:bg-purple-600  md:hover:text-gray-600 md:hover:bg-transparent">
 				        <Wallet className="w-2/3"/>
 				        </li>

@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SportSlider from './SportSlider';
 
 const sportsData = [
-  { name: 'Cricket', info: 'Cricket information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'},
+  { name: 'Cricket', info: 'Cricket information...', image: "../public/images/cricket.png"},
   { name: 'Football', info: 'Football information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg' },
   { name: 'Basketball', info: 'Basketball information...', image: 'https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg'},
   // Add more sports as needed
