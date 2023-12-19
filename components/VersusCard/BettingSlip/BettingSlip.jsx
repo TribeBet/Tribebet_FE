@@ -22,13 +22,13 @@ const BettingSlip = ({ onClose, match }) => {
       <div className="bg-transparent border-2 border-solid border-gray-400 p-4 rounded-lg w-96">
         <h2 className="text-xl font-bold mb-2">Bet Slip</h2>
         <div className="mb-2">
-          <h3 className="text-lg font-bold">{match.team1} vs {match.team2}</h3>
+          <h3 className="text-lg font-bold">{match.team1} VS {match.team2}</h3>
           <div className="flex items-center justify-between mb-2">
           <div className="flex items-center">
             <img src={match.team1.image} alt={match.team1.name} className="w-16 h-auto rounded-xl mb-2 mr-2" />
             <h2 className="text-2xl font-bold">{match.team1.name}</h2>
           </div>
-          <p className="text-2xl font-bold">VS</p>
+
           <div className="flex items-center">
             <img src={match.team2.image} alt={match.team2.name} className="w-16 h-auto rounded-xl mb-2 mr-2" />
             <h2 className="text-2xl font-bold">{match.team2.name}</h2>
