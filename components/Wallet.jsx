@@ -24,7 +24,6 @@ const Wallet = () => {
         // }
     }, []);
 
-
     const getAptosWallet = () => {
         if ('aptos' in window) {
             return setWallet(window.aptos);
@@ -33,8 +32,6 @@ const Wallet = () => {
             window.open('https://petra.app/', `_blank`);
         }
     };
-
-
 
     const connect = async () => {
         getAptosWallet();
@@ -111,4 +108,4 @@ const Wallet = () => {
     )
 }
 
-export default Wallet
+export default Wallet;

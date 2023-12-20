@@ -1,4 +1,3 @@
-// components/SportCard.js
 import React from 'react';
 
 const SportCard = ({ imageUrl, title,  style }) => {
@@ -17,4 +16,4 @@ const SportCard = ({ imageUrl, title,  style }) => {
   );
 };
 
-export default SportCard;
+export default SportCard

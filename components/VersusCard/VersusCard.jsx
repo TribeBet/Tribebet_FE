@@ -34,27 +34,26 @@ const VersusCard = ({ image1, image2, text1, text2, team1, team2, prob1, prob2, 
       <div className="flex justify-between gap-2">
         <button
           onClick={handleOpenBettingSlip}
-          className="result-button bg-transparent border-solid text-start border-2 border-gray-200 w-13 items-center justify-center p-2 rounded-xl"
+          className="result-button bg-transparent border-solid text-start border-2 border-gray-200 w-13 items-center justify-center p-2 rounded-xl transition duration-300 ease-in-out transform hover:bg-gray-200 hover:scale-105"
         >
           {team1} Wins
           <span className="text-purple-400"> {prob1}</span>
         </button>
         <button
           onClick={handleOpenBettingSlip}
-          className="result-button bg-transparent border-solid text-start border-2 border-gray-200 w-13 items-center justify-center p-2 rounded-xl"
+          className="result-button bg-transparent border-solid text-start border-2 border-gray-200 w-13 items-center justify-center p-2 rounded-xl transition duration-300 ease-in-out transform hover:bg-gray-200 hover:scale-105"
         >
           Draw
           <span className="text-purple-400"> {prob2}</span>
         </button>
         <button
           onClick={handleOpenBettingSlip}
-          className="result-button bg-transparent border-solid text-start border-2 border-gray-200 w-13 items-center justify-center p-2 rounded-xl"
+          className="result-button bg-transparent border-solid text-start border-2 border-gray-200 w-13 items-center justify-center p-2 rounded-xl transition duration-300 ease-in-out transform hover:bg-gray-200 hover:scale-105"
         >
           {team2} Wins
           <span className="text-purple-400"> {prob3}</span>
         </button>
       </div>
-
       {/* Betting Slip */}
       {bettingSlipVisible && (
         <BettingSlip
@@ -67,3 +66,4 @@ const VersusCard = ({ image1, image2, text1, text2, team1, team2, prob1, prob2, 
 };
 
 export default VersusCard;
+
